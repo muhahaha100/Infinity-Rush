@@ -768,12 +768,15 @@ MonoBehaviour:
     type: 3}
   coinPrefab: {fileID: 4694957107537230932, guid: f21acb8d24798174dbda18be8a3732ab,
     type: 3}
+  upgradePrefabs:
+  - {fileID: 4694957107537230932, guid: e251131baccb4b54d9e7b2a0e1c87781, type: 3}
   numberOfPlatforms: 5000
   levelWidth: 8
   minY: 2
   maxY: 2.2
   boostEach: 7
-  coinEach: 10
+  coinEach: 5
+  UpgradeEach: 9
   coinOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &179503662
 Transform:
@@ -11804,6 +11807,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -11819,6 +11827,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -11831,16 +11844,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
         type: 3}
