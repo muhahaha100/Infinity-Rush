@@ -16,7 +16,8 @@ public class PlayerShoot : MonoBehaviour
 
     public WeaponsUnlocks.Weapon weapon = WeaponsUnlocks.Weapon.Pistol;
 
-    private float cooldown;
+    public float cooldown = 0.3f;
+    private float counter = 0;
     void Awake()
     {
         particleSystem = GetComponentInChildren<ParticleSystem>();
@@ -27,9 +28,10 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Playing() && Input.GetKeyDown(KeyCode.Mouse0) && Time.time > cooldown)
+        counter += Time.deltaTime;
+        if (GameManager.Playing() && Input.GetKeyDown(KeyCode.Mouse0) && counter > cooldown)
         {
-            cooldown = Time.time + 0.3f;
+            counter = 0;
             particleSystem.Play();
             audioSource.Play();
             Shoot();

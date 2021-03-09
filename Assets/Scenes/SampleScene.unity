@@ -770,6 +770,7 @@ MonoBehaviour:
     type: 3}
   upgradePrefabs:
   - {fileID: 4694957107537230932, guid: e251131baccb4b54d9e7b2a0e1c87781, type: 3}
+  - {fileID: 4694957107537230932, guid: b1b5b64b03fa3374580827f324113f8e, type: 3}
   numberOfPlatforms: 5000
   levelWidth: 8
   minY: 2
@@ -7559,7 +7560,7 @@ MonoBehaviour:
   rifle_cost: 250
   rpg_cost: 1000
   playerMoney: {fileID: 1758053376319232376}
-  playerShoot: {fileID: 7709931521751383225}
+  playerShoot: {fileID: 0}
 --- !u!114 &713804894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11665,6 +11666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
+  jumpModifier: 1
   IsJetpacking: 0
 --- !u!114 &1515263522444550698
 MonoBehaviour:
@@ -12229,6 +12231,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5663684099720307623, guid: 96d05b60876a40a47b0f9ec33b9964fb,
     type: 3}
   weapon: 0
+  cooldown: 0
 --- !u!114 &7709931521751383226
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedUpgrade : Upgrade
+public class ShotSpeedUpgrade : Upgrade
 {
-
-    [SerializeField] float speedModifier = 1.5F;
+    [SerializeField] float shotSpeedModifier = 1.5F;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if (collision.tag == "Player")
         {
-            collision.gameObject.GetComponent<Player>().jumpModifier *= speedModifier;
-            StartCoroutine(shutOffUpgrade(collision.gameObject.GetComponent<Player>()));
+            collision.gameObject.GetComponentInChildren<PlayerShoot>().cooldown /= shotSpeedModifier;
+            StartCoroutine(shutOffUpgrade(collision.gameObject.GetComponentInChildren<PlayerShoot>()));
             active = false;
             this.enabled = false;
             spriteRenderer.enabled = false;
@@ -21,11 +20,11 @@ public class SpeedUpgrade : Upgrade
         }
     }
 
-    private IEnumerator shutOffUpgrade(Player p)
+    private IEnumerator shutOffUpgrade(PlayerShoot p)
     {
         yield return new WaitForSeconds(activeTime);
         Debug.Log("here");
-        p.jumpModifier /= speedModifier;
+        p.cooldown *= shotSpeedModifier;
         Destroy(gameObject);
     }
 }
