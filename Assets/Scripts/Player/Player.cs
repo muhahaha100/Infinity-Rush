@@ -8,6 +8,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float movementSpeed = 10f;
+    public float jumpModifier = 1f;
+
     public bool IsJetpacking = false;
 
     Rigidbody2D rb;

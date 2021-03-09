@@ -36,7 +36,7 @@ public class Platform : MonoBehaviour
                     if (rb != null)
                     {
                         Vector2 velocity = rb.velocity;
-                        velocity.y = jumpForce;
+                        velocity.y = jumpForce * player.jumpModifier;
                         rb.velocity = velocity;
                         
                     }
@@ -47,7 +47,7 @@ public class Platform : MonoBehaviour
             if (rb != null)
             {
                 Vector2 velocity = rb.velocity;
-                velocity.y = jumpForce;
+                velocity.y = jumpForce ;
                 rb.velocity = velocity;
             }
 
