@@ -777,7 +777,7 @@ MonoBehaviour:
   maxY: 2.2
   boostEach: 7
   coinEach: 5
-  UpgradeEach: 9
+  UpgradeEach: 17
   coinOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &179503662
 Transform:
@@ -7560,7 +7560,7 @@ MonoBehaviour:
   rifle_cost: 250
   rpg_cost: 1000
   playerMoney: {fileID: 1758053376319232376}
-  playerShoot: {fileID: 0}
+  playerShoot: {fileID: 7709931521751383225}
 --- !u!114 &713804894
 MonoBehaviour:
   m_ObjectHideFlags: 0
