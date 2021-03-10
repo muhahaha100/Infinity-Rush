@@ -766,6 +766,8 @@ MonoBehaviour:
     type: 3}
   boostPrefab: {fileID: 324082944914061387, guid: e1de6bd8de4048d489521aa5e1dda614,
     type: 3}
+  brakePlatformPrefab: {fileID: 2603130407593912519, guid: fde22614eb6bbb54d9811289be820344,
+    type: 3}
   coinPrefab: {fileID: 4694957107537230932, guid: f21acb8d24798174dbda18be8a3732ab,
     type: 3}
   numberOfPlatforms: 5000
@@ -11804,6 +11806,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -11819,6 +11826,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -11831,16 +11843,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3736421190891318409, guid: bc002a48f603f5141bcd078843b2d1d2,
         type: 3}

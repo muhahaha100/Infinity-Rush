@@ -13,6 +13,7 @@ public class LevelGenerator : MonoBehaviour
     public GeneratorMode generatorMode;
     public GameObject platformPrefab;
     public GameObject boostPrefab;
+    public GameObject brakePlatformPrefab;
     public GameObject coinPrefab;
 
     public int numberOfPlatforms = 200;
@@ -68,20 +69,32 @@ public class LevelGenerator : MonoBehaviour
                 spawnPosition.x = (Random.Range(-spawnPosition.x, spawnPosition.x) * 0.5f + Random.Range(-levelWidth, levelWidth) * 1.5f) / 2;
                 boostCounter++;
                 coinCounter++;
-                if (boostCounter % boostEach == 0)
+                bool skip = false;
+                if ( player.position.y / 1000 > Random.value )
                 {
-                    Instantiate(boostPrefab, spawnPosition, Quaternion.identity);
+                    skip = true;
+                    Instantiate(brakePlatformPrefab, spawnPosition, Quaternion.identity);
                 }
-                else
+
+                if ( !skip )
                 {
-                    Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
+                    if (boostCounter % boostEach == 0)
+                    {
+                        Instantiate(boostPrefab, spawnPosition, Quaternion.identity);
+                    }
+                    else
+                    {
+                        Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
+                    }
                 }
+                
 
                 if(coinCounter % coinEach == 0)
                 {
                     Instantiate(coinPrefab, spawnPosition + coinOffset, Quaternion.identity);
                 }
                 lastPosition = spawnPosition;
+                skip = false;
             }
         }
     }

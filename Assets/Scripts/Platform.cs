@@ -39,6 +39,11 @@ public class Platform : MonoBehaviour
                         velocity.y = jumpForce;
                         rb.velocity = velocity;
                         
+                        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+                        if ( sr.flipX )
+                        {
+                            Destroy(gameObject);
+                        }
                     }
                     return;
                 }
