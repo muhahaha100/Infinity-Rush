@@ -11667,7 +11667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6eecd530c3ab1340a00ed2affcd008d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  movementSpeed: 12
   jumpModifier: 1
   IsJetpacking: 0
 --- !u!114 &1515263522444550698

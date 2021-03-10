@@ -8,7 +8,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float movementSpeed = 12f;
-    [SerializeField] public float jumpModifier = 20f;
+    [SerializeField] public float jumpModifier = 1f;
 
 
     public bool IsJetpacking = false;
@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
             Vector2 velocity = rb.velocity;
             velocity.y = (movementSpeed * jumpModifier) + collision.gameObject.GetComponent<Platform>().jumpForce;
             rb.velocity = velocity;
+            collision.gameObject.GetComponent<Platform>().CheckDestroy();
         }
     }
 }

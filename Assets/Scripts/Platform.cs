@@ -25,6 +25,16 @@ public class Platform : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void CheckDestroy()
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr.flipX)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.relativeVelocity.y <= 0f)

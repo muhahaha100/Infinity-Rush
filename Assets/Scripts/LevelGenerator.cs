@@ -72,6 +72,7 @@ public class LevelGenerator : MonoBehaviour
                 spawnPosition.x = (Random.Range(-spawnPosition.x, spawnPosition.x) * 0.5f + Random.Range(-levelWidth, levelWidth) * 1.5f) / 2;
                 boostCounter++;
                 coinCounter++;
+                UpgradeCounter++;
 
                 bool skip = false;
                 if ( player.position.y / 1000 > Random.value )
