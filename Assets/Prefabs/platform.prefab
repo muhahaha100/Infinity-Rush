@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5117104024900161782}
   m_Layer: 0
   m_Name: platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +48,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -132,5 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003bf5581e5fdfd4ea7138f95a780c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 12
+  jumpForce: 1
   destroy: 1

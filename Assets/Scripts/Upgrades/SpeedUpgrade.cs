@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpeedUpgrade : Upgrade
 {
 
-    [SerializeField] float speedModifier = 1.5F;
+    [SerializeField] float speedModifier = 1.25F;
 
 
     private void OnTriggerEnter2D(Collider2D collision)

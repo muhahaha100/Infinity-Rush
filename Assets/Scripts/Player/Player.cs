@@ -7,8 +7,9 @@ using UnityEngine;
 /// </summary>
 public class Player : MonoBehaviour
 {
-    public float movementSpeed = 10f;
-    public float jumpModifier = 1f;
+    public float movementSpeed = 12f;
+    [SerializeField] public float jumpModifier = 20f;
+
 
     public bool IsJetpacking = false;
 
@@ -16,6 +17,8 @@ public class Player : MonoBehaviour
 
     float movement = 0f;
     float jetPackThrust;
+
+
 
     void Start()
     {
@@ -44,11 +47,22 @@ public class Player : MonoBehaviour
             rb.velocity = velocity;
         }
     }
+
     /// <summary>
     /// Used by <see cref="PlayerJetpack"/> to set the thrust.
     /// </summary>
     public void SetJetpackThrust(float value)
     {
         jetPackThrust = value;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(!IsJetpacking && rb.velocity.y <= 0 && collision.gameObject.tag == "Platform")
+        {
+            Vector2 velocity = rb.velocity;
+            velocity.y = (movementSpeed * jumpModifier) + collision.gameObject.GetComponent<Platform>().jumpForce;
+            rb.velocity = velocity;
+        }
     }
 }
