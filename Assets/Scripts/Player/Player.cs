@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     public float movementSpeed = 12f;
     [SerializeField] public float jumpModifier = 1f;
 
+    public AudioClip bounce;
+    public AudioClip lose;
+
 
     public bool IsJetpacking = false;
 
@@ -23,6 +26,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        GetComponent<AudioSource>().clip = bounce;
     }
 
     void Update()
@@ -64,6 +68,8 @@ public class Player : MonoBehaviour
             velocity.y = (movementSpeed * jumpModifier) + collision.gameObject.GetComponent<Platform>().jumpForce;
             rb.velocity = velocity;
             collision.gameObject.GetComponent<Platform>().CheckDestroy();
+            
+            GetComponent<AudioSource>().Play();
         }
     }
 }

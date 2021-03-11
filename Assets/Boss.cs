@@ -20,6 +20,7 @@ public class Boss : MonoBehaviour
     [SerializeField] public float shootRate = 5f;
     [SerializeField] private GameObject bullet;
     [SerializeField] private float shootWidth;
+    private AudioSource audio;
 
     private GameObject cam;
     
@@ -28,6 +29,7 @@ public class Boss : MonoBehaviour
     {
         whereShouldIBe = transform.position;
         cam = Camera.main.gameObject;
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -65,5 +67,8 @@ public class Boss : MonoBehaviour
         temp = Instantiate(bullet);
         temp.transform.position = transform.position - Vector3.right * shootWidth;
         temp.transform.rotation = Quaternion.Euler(0,0,180);
+        
+        audio.pitch = Random.Range(0.8f, 1.2f);
+        audio.Play();
     }
 }

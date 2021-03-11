@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/Assets/Boss.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
       </list>
     </option>
   </component>
@@ -63,6 +64,7 @@
       <workItem from="1614906702924" duration="507000" />
       <workItem from="1615252682996" duration="1154000" />
       <workItem from="1615340184249" duration="10874000" />
+      <workItem from="1615420304627" duration="703000" />
     </task>
     <servers />
   </component>
