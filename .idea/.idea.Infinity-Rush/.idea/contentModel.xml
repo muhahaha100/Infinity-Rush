@@ -7,6 +7,7 @@
     <e p="C:\Users\Oscar Cabrera - Luna\Desktop\ExistingProjects\Infinity-Rush" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Boss.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Bullet.cs" t="Include" />
           <e p="CameraFollowOnlyY.cs" t="Include" />
@@ -55,6 +56,11 @@
             <e p="UISingleOptionManager.cs" t="Include" />
             <e p="VersionDisplay.cs" t="Include" />
             <e p="WeaponBuyBtn.cs" t="Include" />
+          </e>
+          <e p="Upgrades" t="Include">
+            <e p="ShotSpeedUpgrade.cs" t="Include" />
+            <e p="SpeedUpgrade.cs" t="Include" />
+            <e p="Upgrade.cs" t="Include" />
           </e>
           <e p="WeaponsUnlocks.cs" t="Include" />
         </e>

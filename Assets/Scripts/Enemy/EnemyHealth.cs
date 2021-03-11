@@ -11,6 +11,8 @@ public class EnemyHealth : MonoBehaviour
     public int maxHealth;
     public int scoreReward;
 
+    public EnemySpawner enemySpawner;
+
     private int health;
     private ParticleSystem particles;
 
@@ -29,6 +31,11 @@ public class EnemyHealth : MonoBehaviour
     {
         return health;
     }
+
+    public void SetHealth(int newHealth)
+    {
+        health = newHealth;
+    }
     /// <summary>
     /// Damages the enemy and handles his death
     /// </summary>
@@ -43,6 +50,10 @@ public class EnemyHealth : MonoBehaviour
     }
     void KillEnemy()
     {
+        if ( scoreReward > 999 )
+        {
+            enemySpawner.bossDied();
+        }
         HighScoreSet.gameScore += scoreReward;
         Instantiate(explosionFx, transform.position, Quaternion.identity);
         Destroy(gameObject);
